@@ -38,6 +38,16 @@ A real telecom OSS recovery investigation: **seven distinct failure modes** acro
 
 ---
 
+## 📚 Engineering documentation & incident postmortems
+
+I maintain an **internal company knowledge base in BookStack** to make production infrastructure understandable, maintainable, and recoverable by the team. It contains engineering documentation, configuration guidance, operational runbooks, troubleshooting procedures, and recovery notes covering infrastructure such as **OpenStack, Proxmox VE, DNS, monitoring, and alerting**.
+
+When incidents occur, I write **postmortems** that capture the symptoms, investigation timeline, root causes, recovery actions, and lessons learned. The goal is to preserve operational knowledge, make recurring faults easier to diagnose, and reduce dependence on undocumented tribal knowledge.
+
+**Public example:** [Huawei SANEX9510 recovery postmortem on Habr](https://habr.com/ru/articles/1101712/). The company BookStack itself is private and its internal pages are not published here.
+
+---
+
 ## 🚀 Featured projects
 
 ### [OSS Control Center](https://github.com/codexhtb/oss-control-center) — ISP Operations Platform
@@ -97,7 +107,7 @@ These examples are intentionally high-level: internal topology, credentials, sub
 | **Platforms & virtualization** | Linux, Proxmox VE, KVM, OpenStack (Kolla-Ansible), Docker, Kubernetes |
 | **Observability** | LibreNMS, Icinga 2, Prometheus, Grafana, Loki, DNStap |
 | **Software & data** | Python, Go, TypeScript, Bash, FastAPI, React, PostgreSQL, MariaDB, ClickHouse, Redis |
-| **Operations** | Git, GitHub, Docker Compose, troubleshooting, backup/recovery, infrastructure documentation |
+| **Operations & knowledge** | Git, GitHub, Docker Compose, BookStack, incident postmortems, operational runbooks, troubleshooting, backup/recovery |
 
 ---
 
