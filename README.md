@@ -9,6 +9,18 @@ I design, operate, troubleshoot, and automate infrastructure for internet servic
 
 ---
 
+## 📰 Featured engineering postmortem — published on Habr
+
+### [Reviving Huawei SANEX9510: expired certificates, an empty keystore, and a missing `@`](https://habr.com/ru/articles/1101712/)
+
+**[Read the original article on Habr (Russian) →](https://habr.com/ru/articles/1101712/)**
+
+A real telecom OSS recovery investigation: **seven distinct failure modes** across legacy TLS/PKI, PKCS#12 and PKCS#8 compatibility, Java keystores, and Sybase IQ connections. I reconstructed component dependencies and helped restore the system over **three days**, without rebooting the database. The article walks through diagnosis, misleading symptoms, safe recovery decisions, and lessons for observability.
+
+**Skills demonstrated:** incident response · root-cause analysis · Linux · PKI/TLS · legacy systems · production troubleshooting
+
+---
+
 ## 🚀 Featured projects
 
 ### [OSS Control Center](https://github.com/codexhtb/oss-control-center) — ISP Operations Platform
@@ -56,7 +68,7 @@ A self-hosted platform for understanding what DNS resolvers are doing in real ti
 - **Carrier-grade DNS:** Deployed and operated Unbound resolver infrastructure; worked with a multinode **OpenStack / Kolla-Ansible** environment and subsequent migration of core services to **Proxmox VE**.
 - **Network observability:** Modernized monitoring with **LibreNMS**, **Icinga 2**, SNMP-based discovery, PON telemetry, and automated configuration backups.
 - **Linux networking:** Investigated conntrack pressure during network events, adjusted Netfilter capacity, and diagnosed multi-interface **ARP flux** incidents.
-- **Storage incident recovery:** Troubleshot a Huawei SANEX9510 service outage involving PKI/TLS, Java keystores, and certificate handling.
+- **Huawei SANEX9510 recovery:** Investigated a complex telecom OSS outage involving legacy PKI/TLS, Java keystores and database connections — [technical postmortem on Habr](https://habr.com/ru/articles/1101712/).
 
 These examples are intentionally high-level: internal topology, credentials, subscriber data, and sensitive production configuration are not part of this public profile.
 
