@@ -46,6 +46,3 @@ A self-hosted observability platform for **Unbound**, using **DNStap**, a **Go**
 **Platforms:** Linux · OpenStack · Kolla-Ansible · Proxmox VE · KVM · Docker  
 **Networking:** TCP/IP · BGP/OSPF · VLANs · DNS · Unbound · Cisco · BDCOM EPON/GPON  
 **Observability:** Prometheus · Grafana · LibreNMS · Icinga 2 · ClickHouse · DNStap  
-**Development:** Python · Go · TypeScript · Bash · FastAPI · React · PostgreSQL · Git
-
-*Production infrastructure details and internal BookStack content are kept private.*
