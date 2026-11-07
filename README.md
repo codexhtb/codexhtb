@@ -1,48 +1,55 @@
-# Привет, я Бежан 👋
+**🌐 Language:** **English** · [Русский](README.ru.md)
+
+---
+
+# Hi, I'm Bezhan 👋
 
 **Network & Platform Engineer**  
-Инфраструктура операторов связи · Облачные платформы · Linux · Автоматизация · Мониторинг
+ISP Infrastructure · Private Cloud · Linux · Automation · Observability
 
-Проектирую, разворачиваю и сопровождаю сетевую и серверную инфраструктуру — от виртуализации и DNS до мониторинга, расследования аварий и автоматизации повседневных задач.
+I build and operate infrastructure for internet service providers — from virtualization and DNS to monitoring, incident response, and tools that remove repetitive operational work.
 
-## Избранные проекты
+## Selected work
 
-### ☁️ [Облачная инфраструктура и DNS для оператора связи](projects/private-cloud-dns-observability.md)
+### ☁️ [Production Private Cloud & DNS Infrastructure](projects/private-cloud-dns-observability.md)
 
-Развернул в **production многонодовый OpenStack на Kolla-Ansible** и два DNS-резолвера **Unbound** для мобильного оператора с абонентской базой около **100 000 человек**. Настроил сетевую инфраструктуру, сбор DNS-метрик в Prometheus, дашборды Grafana и оповещения. Позже перенёс DNS-сервисы с OpenStack на **Proxmox VE**.
+Deployed **OpenStack with Kolla-Ansible Multinode** in production, running two **Unbound DNS resolvers** for a mobile network operator with approximately **100,000 subscribers**. Built the network foundation, custom Prometheus metrics, Grafana dashboards, and alerting. Later migrated the DNS workloads to **Proxmox VE**.
 
-**Показатели на снимке Grafana:** 4,18 млрд DNS-запросов · 4,02 млрд попаданий в кеш · cache hit ratio 96,2%. Счётчики накопительные; цифры не являются показателями SLA.
+**Grafana snapshot:** 4.18B DNS queries · 4.02B cache hits · 96.2% cache hit ratio (point-in-time/cumulative dashboard readings).
 
-Также разработал [**dns-noc-bot**](https://github.com/codexhtb/dns-noc-bot) — Telegram-бота для проверки DNS через Prometheus: состояние серверов, алерты, conntrack и графики нагрузки.
+Also built [**dns-noc-bot**](https://github.com/codexhtb/dns-noc-bot) — a Telegram interface for Prometheus-powered DNS health checks, alerts, conntrack, and traffic graphs.
 
 ### 🛠️ [OSS Control Center](https://github.com/codexhtb/oss-control-center)
 
-Внутренняя платформа интернет-провайдера, объединяющая **NetUP UTM5**, **LibreNMS/BDCOM**, обработку заявок, диагностику абонентских подключений, передачу задач монтажникам, контрольный обзвон и рабочий чат. Создана, чтобы сократить повторяющиеся действия и работу в разрозненных системах.
+An internal ISP operations platform connecting **NetUP UTM5**, **LibreNMS/BDCOM**, ticket management, subscriber diagnostics, field dispatch, customer callbacks, and team chat. Designed to replace repetitive lookups and fragmented support workflows.
 
-[Архитектура и технический разбор проекта](https://github.com/codexhtb/oss-control-center/blob/main/docs/portfolio-case-study.md) · **FastAPI · React · TypeScript · PostgreSQL · Docker**
+[Architecture & engineering case study](https://github.com/codexhtb/oss-control-center/blob/main/docs/portfolio-case-study.md) · **FastAPI · React · TypeScript · PostgreSQL · Docker**
 
-### 📰 [Huawei SANEX9510 — разбор аварии в production](https://habr.com/ru/articles/1101712/)
+### 📰 [Huawei SANEX9510 — Production Incident Postmortem](https://habr.com/ru/articles/1101712/)
 
-Опубликовал на **Хабре** технический разбор восстановления критической системы оператора связи: проблемы TLS/PKI, Java keystores и соединения с базой данных. Практический опыт поиска первопричин и восстановления сложных legacy-систем.
+Published a technical investigation on **Habr** (in Russian) covering a complex telecom OSS outage, legacy TLS/PKI, Java keystores, and database connectivity. A practical case in root-cause analysis and recovery of a critical system.
 
 ### 💻 [CLIRace](https://github.com/codexhtb/clirace)
 
-Платформа для практического изучения Linux и DevOps: задачи с настоящим терминалом в **изолированных rootless Docker-контейнерах**, тренировки и соревновательные режимы.
+A hands-on Linux and DevOps learning platform with real terminal sessions in **isolated rootless Docker containers**, challenges, and multiplayer interactions.
 
 **TypeScript · Fastify · React · PostgreSQL · Redis · WebSocket**
 
-### 📡 [Pulse — мониторинг DNS](https://github.com/codexhtb/pulse)
+### 📡 [Pulse — DNS Observability](https://github.com/codexhtb/pulse)
 
-Собственная платформа наблюдаемости для **Unbound** на базе **DNStap**, коллектора на **Go**, **ClickHouse** и веб-интерфейса с данными в реальном времени. Позволяет анализировать DNS-запросы и ответы, нагрузку и задержки.
+A self-hosted observability platform for **Unbound**, using **DNStap**, a **Go** collector, **ClickHouse**, and a real-time web interface for DNS transaction correlation, traffic analysis, and latency investigation.
 
-## Эксплуатация и документация
+## Operations & documentation
 
-- Веду внутреннюю базу знаний компании в **BookStack**: документация инфраструктуры, инструкции по восстановлению и postmortem-разборы аварий.
-- Диагностирую проблемы **Linux и сетевой инфраструктуры**, включая conntrack, ARP и нестандартные производственные инциденты.
-- Разворачиваю мониторинг сетевого оборудования и EPON/GPON на базе **LibreNMS**, **Icinga 2** и SNMP; автоматизирую резервное копирование конфигураций.
+- Maintain internal infrastructure documentation and recovery runbooks in **BookStack**; write incident postmortems after outages.
+- Work with production **Linux networking**, including conntrack capacity, ARP issues, network monitoring, and troubleshooting.
+- Build monitoring for network devices and EPON/GPON access infrastructure using **LibreNMS**, **Icinga 2**, SNMP, and configuration backups.
 
-## Основные технологии
+## Core technologies
 
-**Облака и виртуализация:** Linux · OpenStack · Kolla-Ansible · Proxmox VE · KVM · Docker  
-**Сети и DNS:** TCP/IP · BGP/OSPF · VLAN · DNS · Unbound · Cisco · BDCOM EPON/GPON  
-**Мониторинг:** Prometheus · Grafana · LibreNMS · Icinga 2 · ClickHouse · DNStap  
+**Platforms:** Linux · OpenStack · Kolla-Ansible · Proxmox VE · KVM · Docker  
+**Networking:** TCP/IP · BGP/OSPF · VLANs · DNS · Unbound · Cisco · BDCOM EPON/GPON  
+**Observability:** Prometheus · Grafana · LibreNMS · Icinga 2 · ClickHouse · DNStap  
+**Development:** Python · Go · TypeScript · Bash · FastAPI · React · PostgreSQL · Git
+
+*Production infrastructure details and internal BookStack content are kept private.*
