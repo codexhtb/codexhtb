@@ -1,33 +1,79 @@
-### Hi, my name is Bezhan 👋 
+# Hi, I'm Bezhan 👋
 
-**Infrastructure & Network Engineer** based in Abkhazia. Passionate about building robust carrier-grade telecommunications infrastructure, high-performance virtualization, Linux kernel internals, and automation. 
+### Network & Platform Engineer
+**ISP Infrastructure · Linux · Automation · Observability**
 
----
+I design, operate, troubleshoot, and automate infrastructure for internet service providers. My work sits at the intersection of **network engineering, Linux platforms, and practical software development** — from DNS and virtualization to monitoring and end-to-end operational workflows.
 
-### 🚀 Core Tech Stack
-
-* **Virtualization & Systems:** OpenStack (Kolla Ansible Multinode), Proxmox VE (PVE Cluster), KVM, Kubernetes, Docker / Containerization
-* **Networking & Protocols:** TCP/IP, BGP/OSPF, DNS (Unbound, BIND, PowerDNS), Cisco switches & ASA, BDCOM PON
-* **Observability & Monitoring:** ClickHouse, Prometheus, Loki, InfluxDB, Grafana (custom production dashboards), LibreNMS, Zabbix
-* **Languages & Tooling:** Go (Pulse backend), Python, Bash, Git, LLM Ops / RAG system design (Pytest), Linux Kernel optimization
+> If a team has to repeat the same manual workflow every day, I look for a way to engineer it out.
 
 ---
 
-### 💡 Key Projects & Achievements
+## 🚀 Featured projects
 
-* **Pulse — DNS Observability Platform:** Developed a high-performance self-hosted DNS observability system for Unbound resolvers using DNStap telemetry, a Go/SSE backend, ClickHouse storage, and a real-time Web UI for transaction tracking, latency percentiles, and anomaly detection[cite: 4].
-* **Carrier-Grade DNS & Infrastructure Migration:** Initially deployed and scaled a high-load DNS cluster (Unbound) on a production **OpenStack (Kolla Ansible Multinode)** cluster built from scratch, serving 100k+ subscribers at 4K+ QPS. Successfully engineered the subsequent migration of core services to a high-performance **Proxmox VE** cluster.
-* **Huawei SANEX9510 Recovery:** Successfully restored a critical infrastructure outage by deep-diving into PKI/TLS protocols, Java keystores, and encoding debugging where vendor support stalled.
-* **CodexOps V1 (NOC AI Assistant):** Built a secure, read-only local LLM/RAG assistant for infrastructure ops backed by 700+ pytest tests and strict RCE boundaries.
+### [OSS Control Center](https://github.com/codexhtb/oss-control-center) — ISP Operations Platform
+
+**The problem:** Support operators and network engineers had to switch between a legacy service desk, billing, monitoring, network CLI, and messengers to resolve a single subscriber issue.
+
+**The solution:** An integrated internal platform built around the actual ISP support workflow:
+
+- Subscriber lookup and service context from **NetUP UTM5** through a read-only data path.
+- Tickets, operator/engineer queues, resolution history, and customer follow-up.
+- **LibreNMS / BDCOM EPON–GPON** diagnostics linked to subscriber connections, including ONU status and disconnection reasons.
+- Structured field dispatch via **Telegram bot**, with feedback returned to the ticket workflow.
+- Internal team chat to reduce fragmented operational communication.
+
+**Stack:** Python · FastAPI · React · TypeScript · PostgreSQL · Docker · MariaDB · LibreNMS · NetUP
+
+**My focus:** Workflow design, infrastructure, data integration, technical decision-making, and validating the system against real network operations.
+
+### [CLIRace](https://github.com/codexhtb/clirace) — Hands-on Linux & DevOps Learning
+
+A practice and competition platform where users solve real Linux tasks in isolated shell environments rather than only answering quizzes.
+
+- Disposable **rootless Docker** sandboxes with resource and network isolation.
+- Browser terminal and real-time multiplayer interactions over **WebSocket**.
+- Linux learning paths, practical labs, challenges, rankings, and interview preparation.
+- Backend-managed sessions, progress tracking, and operational controls.
+
+**Stack:** TypeScript · Fastify · React · PostgreSQL · Redis · Docker · WebSocket
+
+### [Pulse](https://github.com/codexhtb/pulse) — DNS Observability for Unbound
+
+A self-hosted platform for understanding what DNS resolvers are doing in real time, without placing the monitoring system in the critical DNS request path.
+
+- **DNStap** ingestion and query/response correlation, including unmatched or missing responses.
+- **ClickHouse** storage and aggregations for DNS traffic, RCODEs, QPS, and latency percentiles.
+- Live traffic and operational dashboards via **REST / Server-Sent Events**.
+- Optional isolated DNS control-plane components.
+
+**Stack:** Go · Unbound · DNStap · ClickHouse · React · Docker
 
 ---
 
-### 🛠️ Production Troubleshooting & Post-Mortems
+## 🛠️ Infrastructure & incident engineering
 
-* **Netfilter Conntrack Optimization:** Mitigated severe traffic storms caused by regional power-grid outages by tuning kernel parameters, extending `nf_conntrack_max` to 2M, adjusting hash sizes, and overriding `pve-firewall` limits.
-* **L2 ARP Flux Resolution:** Diagnosed and resolved complex production outages caused by weak host model ARP conflicts and multi-interface overlapping subnets.
+- **Carrier-grade DNS:** Deployed and operated Unbound resolver infrastructure; worked with a multinode **OpenStack / Kolla-Ansible** environment and subsequent migration of core services to **Proxmox VE**.
+- **Network observability:** Modernized monitoring with **LibreNMS**, **Icinga 2**, SNMP-based discovery, PON telemetry, and automated configuration backups.
+- **Linux networking:** Investigated conntrack pressure during network events, adjusted Netfilter capacity, and diagnosed multi-interface **ARP flux** incidents.
+- **Storage incident recovery:** Troubleshot a Huawei SANEX9510 service outage involving PKI/TLS, Java keystores, and certificate handling.
+
+These examples are intentionally high-level: internal topology, credentials, subscriber data, and sensitive production configuration are not part of this public profile.
+
+## ⚙️ Technologies I work with
+
+| Area | Tools & technologies |
+| --- | --- |
+| **Network engineering** | TCP/IP, VLANs, routing, BGP/OSPF, DNS, SNMP, Cisco, BDCOM EPON/GPON |
+| **Platforms & virtualization** | Linux, Proxmox VE, KVM, OpenStack (Kolla-Ansible), Docker, Kubernetes |
+| **Observability** | LibreNMS, Icinga 2, Prometheus, Grafana, Loki, DNStap |
+| **Software & data** | Python, Go, TypeScript, Bash, FastAPI, React, PostgreSQL, MariaDB, ClickHouse, Redis |
+| **Operations** | Git, GitHub, Docker Compose, troubleshooting, backup/recovery, infrastructure documentation |
 
 ---
 
-### 🎯 Focus
-High-load networking, SRE/DevOps automation, Proxmox clustering, and resilient infrastructure design.
+### Engineering philosophy
+
+**Understand the failure mode. Design for recovery. Automate the repetitive parts. Keep the operational path simple.**
+
+Explore the repositories above for implementation details, architecture diagrams, and technical documentation.
