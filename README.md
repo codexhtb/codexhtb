@@ -9,6 +9,23 @@ I design, operate, troubleshoot, and automate infrastructure for internet servic
 
 ---
 
+## ☁️ Featured infrastructure case — Production Private Cloud & DNS
+
+### [OpenStack Kolla-Ansible Multinode → Proxmox VE | Carrier-Grade DNS](projects/private-cloud-dns-observability.md)
+
+Designed and deployed a **production multinode OpenStack private cloud**, launched **two Unbound DNS resolvers** for a mobile network operator serving **~100,000 subscribers**, built the monitoring and alerting stack, and subsequently migrated the DNS infrastructure to **Proxmox VE**.
+
+- **Cloud/platform:** OpenStack (Kolla-Ansible Multinode), virtual networking, segmentation, firewall policy, Proxmox VE migration.
+- **DNS operations:** Unbound DNS1/DNS2, resolver performance analysis, availability monitoring.
+- **Observability:** custom Prometheus DNS exporter, Grafana dashboards for QPS, cache efficiency, NXDOMAIN/SERVFAIL, latency, infrastructure health, and alert rules.
+- **NOC automation:** [dns-noc-bot](https://github.com/codexhtb/dns-noc-bot), a Python Telegram tool for Prometheus-powered status, alert, conntrack, comparison and graph commands.
+
+**Observed Grafana snapshot:** **4.18B DNS queries · 4.02B cache hits · 96.2% cache hit ratio** (cumulative counters and point-in-time ratio, not an SLA or annual benchmark).
+
+**[Read the architecture, migration and observability case study →](projects/private-cloud-dns-observability.md)**
+
+---
+
 ## 📰 Featured engineering postmortem — published on Habr
 
 ### [Reviving Huawei SANEX9510: expired certificates, an empty keystore, and a missing `@`](https://habr.com/ru/articles/1101712/)
@@ -65,7 +82,7 @@ A self-hosted platform for understanding what DNS resolvers are doing in real ti
 
 ## 🛠️ Infrastructure & incident engineering
 
-- **Carrier-grade DNS:** Deployed and operated Unbound resolver infrastructure; worked with a multinode **OpenStack / Kolla-Ansible** environment and subsequent migration of core services to **Proxmox VE**.
+- **Cloud and DNS infrastructure:** Production deployment of **OpenStack / Kolla-Ansible Multinode**, Unbound DNS services and a later **Proxmox VE** migration — [full engineering case study](projects/private-cloud-dns-observability.md).
 - **Network observability:** Modernized monitoring with **LibreNMS**, **Icinga 2**, SNMP-based discovery, PON telemetry, and automated configuration backups.
 - **Linux networking:** Investigated conntrack pressure during network events, adjusted Netfilter capacity, and diagnosed multi-interface **ARP flux** incidents.
 - **Huawei SANEX9510 recovery:** Investigated a complex telecom OSS outage involving legacy PKI/TLS, Java keystores and database connections — [technical postmortem on Habr](https://habr.com/ru/articles/1101712/).
