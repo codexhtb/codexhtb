@@ -99,13 +99,13 @@ The repository implements commands for:
 
 | Command / capability | Purpose |
 | --- | --- |
-| \`/status\` | Per-resolver QPS, recent peak, CPU, free RAM, cache, failures and conntrack |
-| \`/health\` | Overview of monitored resolvers and an indicative traffic split |
-| \`/alerts\` | Current firing Prometheus alerts |
-| \`/compare\`, \`/summary\` | Compare DNS traffic and summarize NOC health |
-| \`/graph\`, \`/overlay\` | Generate DNS QPS plots using Prometheus range queries |
-| \`/conntrack\` | Inspect connection-tracking utilization |
-| \`/analyze\` | Basic resolver metrics analysis |
+| `/status` | Per-resolver QPS, recent peak, CPU, free RAM, cache, failures and conntrack |
+| `/health` | Overview of monitored resolvers and an indicative traffic split |
+| `/alerts` | Current firing Prometheus alerts |
+| `/compare`, `/summary` | Compare DNS traffic and summarize NOC health |
+| `/graph`, `/overlay` | Generate DNS QPS plots using Prometheus range queries |
+| `/conntrack` | Inspect connection-tracking utilization |
+| `/analyze` | Basic resolver metrics analysis |
 
 The bot illustrates a **pragmatic NOC workflow**, not an autonomous incident-remediation agent. Readiness for unrestricted deployment requires access control, configuration cleanup and least-privilege service operation; the public code should be reviewed before re-use.
 
