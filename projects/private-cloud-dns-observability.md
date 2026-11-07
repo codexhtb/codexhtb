@@ -109,6 +109,14 @@ The repository implements commands for:
 
 The bot illustrates a **pragmatic NOC workflow**, not an autonomous incident-remediation agent. Readiness for unrestricted deployment requires access control, configuration cleanup and least-privilege service operation; the public code should be reviewed before re-use.
 
+## Operational documentation and incident reviews
+
+Beyond deployment and dashboards, I maintain **internal BookStack documentation** for the infrastructure's operational lifecycle: configuration notes, troubleshooting procedures, monitoring guidance and recovery runbooks. These documents support repeatable maintenance and handover within the engineering team.
+
+After infrastructure incidents, I record **postmortem analyses** covering observable symptoms, investigation and recovery steps, identified causes and preventive follow-up. This is part of my operational engineering practice, not a public export of company documentation.
+
+A publicly available example of my incident-investigation writing is the [Huawei SANEX9510 recovery article on Habr](https://habr.com/ru/articles/1101712/).
+
 ## Why this project matters
 
 This work demonstrates the combination of **cloud/platform deployment** and **carrier-grade network operations**:
@@ -118,6 +126,7 @@ This work demonstrates the combination of **cloud/platform deployment** and **ca
 3. I designed Grafana dashboards around troubleshooting decisions rather than decorative metrics.
 4. I automated repeatable NOC checks using the observability API.
 5. I later migrated the workloads to another virtualization platform, keeping platform lifecycle and operational needs in view.
+6. I maintain private operational documentation and structured incident reviews so engineering knowledge survives beyond individual troubleshooting sessions.
 
 ## Technical stack
 
