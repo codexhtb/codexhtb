@@ -2,7 +2,7 @@
 
 ---
 
-# Hi, I'm Bezhan 👋
+# Hi
 
 **Network & Platform Engineer**
 
