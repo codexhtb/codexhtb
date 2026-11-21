@@ -65,7 +65,7 @@ An operational Telegram interface for production DNS infrastructure, integrating
 
 **Technologies:** Python · Prometheus · Telegram Bot API · Linux
 
-### [CLIRace](https://github.com/codexhtb/clirace)
+### [CLIRace](https://clirace.fun/)
 
 An interactive Linux and DevOps learning platform featuring real terminal environments, practical challenges and multiplayer sessions running in isolated rootless Docker containers.
 
