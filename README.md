@@ -4,49 +4,83 @@
 
 # Hi, I'm Bezhan 👋
 
-**Network & Platform Engineer**  
+**Network & Platform Engineer**
+
 ISP Infrastructure · Private Cloud · Linux · Automation · Observability
 
-I build and operate infrastructure for internet service providers — from virtualization and DNS to monitoring, incident response, and tools that remove repetitive operational work.
+I work in telecommunications, designing, deploying and maintaining network and server infrastructure for internet service providers and mobile network operators.
 
-## Selected work
+My responsibilities cover the entire infrastructure lifecycle — from physical servers, networking and virtualization to production operations, observability, automation and incident recovery.
 
-### ☁️ [Production Private Cloud & DNS Infrastructure](projects/private-cloud-dns-observability.md)
+## Engineering expertise
 
-Deployed **OpenStack with Kolla-Ansible Multinode** in production, running two **Unbound DNS resolvers** for a mobile network operator with approximately **100,000 subscribers**. Built the network foundation, custom Prometheus metrics, Grafana dashboards, and alerting. Later migrated the DNS workloads to **Proxmox VE**.
+- **Network Engineering** — ISP network infrastructure, network architecture, troubleshooting and production operations.
+- **Infrastructure & Platform Engineering** — physical servers, Linux, private clouds, OpenStack, Proxmox VE, virtualization and workload migration.
+- **DNS Infrastructure** — deployment, configuration, monitoring and operation of production recursive DNS services.
+- **Observability Engineering** — monitoring infrastructure, custom exporters, telemetry collectors, monitoring templates, dashboards and alerting.
+- **Databases** — deployment, administration, backup, recovery and integration with infrastructure services.
+- **DevOps** — Kubernetes, Terraform, Infrastructure as Code and CI/CD pipelines.
+- **Engineering Automation** — development of internal tools and platforms that solve operational problems and automate repetitive engineering tasks.
+- **Incident Management** — troubleshooting complex production failures, service recovery, root-cause analysis, incident postmortems and technical documentation.
 
-**Grafana snapshot:** 4.18B DNS queries · 4.02B cache hits · 96.2% cache hit ratio (point-in-time/cumulative dashboard readings).
+## Selected engineering projects
 
-Also built [**dns-noc-bot**](https://github.com/codexhtb/dns-noc-bot) — a Telegram interface for Prometheus-powered DNS health checks, alerts, conntrack, and traffic graphs.
+### [Production Private Cloud & DNS Infrastructure](projects/private-cloud-dns-observability.md)
 
-### 🛠️ [OSS Control Center](https://github.com/codexhtb/oss-control-center)
+Designed and deployed a production multinode OpenStack private cloud using Kolla-Ansible, hosting recursive DNS infrastructure for a mobile network operator serving approximately 100,000 subscribers.
 
-An internal ISP operations platform connecting **NetUP UTM5**, **LibreNMS/BDCOM**, ticket management, subscriber diagnostics, field dispatch, customer callbacks, and team chat. Designed to replace repetitive lookups and fragmented support workflows.
+My work included infrastructure deployment, network integration, Unbound resolver configuration, custom metrics collection, Prometheus, Grafana dashboards and alerting.
 
-[Architecture & engineering case study](https://github.com/codexhtb/oss-control-center/blob/main/docs/portfolio-case-study.md) · **FastAPI · React · TypeScript · PostgreSQL · Docker**
+Later migrated the DNS workloads from OpenStack to Proxmox VE.
 
-### 📰 [Huawei SANEX9510 — Production Incident Postmortem](https://habr.com/ru/articles/1101712/)
+**Technologies:** OpenStack · Kolla-Ansible · Proxmox VE · Linux · Unbound · Prometheus · Grafana
 
-Published a technical investigation on **Habr** (in Russian) covering a complex telecom OSS outage, legacy TLS/PKI, Java keystores, and database connectivity. A practical case in root-cause analysis and recovery of a critical system.
+### [OSS Control Center](https://github.com/codexhtb/oss-control-center)
 
-### 💻 [CLIRace](https://github.com/codexhtb/clirace)
+An internal operations platform for internet service providers, developed to consolidate technical support, network diagnostics and engineering workflows.
 
-A hands-on Linux and DevOps learning platform with real terminal sessions in **isolated rootless Docker containers**, challenges, and multiplayer interactions.
+The project covers the entire solution, from physical server preparation, virtualization, database infrastructure and monitoring deployment to application architecture and development.
 
-**TypeScript · Fastify · React · PostgreSQL · Redis · WebSocket**
+The platform integrates NetUP UTM5, LibreNMS, subscriber diagnostics, EPON/GPON equipment monitoring, ticket management, field operations, customer callbacks and internal team communication.
 
-### 📡 [Pulse — DNS Observability](https://github.com/codexhtb/pulse)
+[Architecture & engineering case study](https://github.com/codexhtb/oss-control-center/blob/main/docs/portfolio-case-study.md)
 
-A self-hosted observability platform for **Unbound**, using **DNStap**, a **Go** collector, **ClickHouse**, and a real-time web interface for DNS transaction correlation, traffic analysis, and latency investigation.
+**Technologies:** Linux · Proxmox VE · FastAPI · React · TypeScript · PostgreSQL · MariaDB · Docker · LibreNMS
 
-## Operations & documentation
+### [Pulse — DNS Observability](https://github.com/codexhtb/pulse)
 
-- Maintain internal infrastructure documentation and recovery runbooks in **BookStack**; write incident postmortems after outages.
-- Work with production **Linux networking**, including conntrack capacity, ARP issues, network monitoring, and troubleshooting.
-- Build monitoring for network devices and EPON/GPON access infrastructure using **LibreNMS**, **Icinga 2**, SNMP, and configuration backups.
+A self-hosted DNS observability platform designed for Unbound infrastructure.
 
-## Core technologies
+Pulse provides transaction-level visibility into DNS traffic through DNStap telemetry, a Go-based collection and correlation pipeline, persistent correlation state and ClickHouse storage.
 
-**Platforms:** Linux · OpenStack · Kolla-Ansible · Proxmox VE · KVM · Docker  
-**Networking:** TCP/IP · BGP/OSPF · VLANs · DNS · Unbound · Cisco · BDCOM EPON/GPON  
-**Observability:** Prometheus · Grafana · LibreNMS · Icinga 2 · ClickHouse · DNStap  
+Features include real-time DNS traffic analysis, query-response correlation, latency investigation, resolver comparison, anomaly detection and an independent DNS control plane.
+
+The platform operates outside the critical DNS resolution path.
+
+**Technologies:** Go · DNStap · ClickHouse · Unbound · React · TypeScript · Docker
+
+### [DNS NOC Bot](https://github.com/codexhtb/dns-noc-bot)
+
+An operational Telegram interface for production DNS infrastructure, integrating with Prometheus to provide resolver health checks, traffic analysis, performance metrics, active alerts and Linux connection-tracking statistics.
+
+**Technologies:** Python · Prometheus · Telegram Bot API · Linux
+
+### [CLIRace](https://github.com/codexhtb/clirace)
+
+An interactive Linux and DevOps learning platform featuring real terminal environments, practical challenges and multiplayer sessions running in isolated rootless Docker containers.
+
+**Technologies:** TypeScript · Fastify · React · PostgreSQL · Redis · Docker · WebSocket
+
+## Incident investigations & technical writing
+
+### [Huawei SANEX9510 — Production Incident Postmortem](https://habr.com/ru/articles/1101712/)
+
+A published technical investigation covering the recovery of a critical telecommunications OSS platform after ten months of downtime.
+
+Identified and resolved seven independent failures across multiple service dependencies, including legacy TLS/PKI, Java keystores, cryptographic compatibility and Sybase IQ database connectivity.
+
+Restored the system within three days without rebooting the servers or restarting the database.
+
+Published on Habr (in Russian).
+
+In addition to public technical writing, I maintain internal infrastructure documentation, operational procedures, recovery runbooks and incident postmortems for critical production systems using BookStack.
