@@ -2,7 +2,7 @@
 
 ---
 
-# Привет, я Бежан 👋
+# Привет
 
 **Network & Platform Engineer**
 
