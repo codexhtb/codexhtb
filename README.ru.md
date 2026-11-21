@@ -65,7 +65,7 @@ Telegram-инструмент для эксплуатации production DNS-и�
 
 **Технологии:** Python · Prometheus · Telegram Bot API · Linux
 
-### [CLIRace][https://github.com/codexhtb/clirace](https://clirace.fun/)
+### [CLIRace](https://clirace.fun/)
 
 Интерактивная платформа для изучения Linux и DevOps с настоящим терминалом, практическими заданиями и многопользовательскими сессиями в изолированных rootless Docker-контейнерах.
 
